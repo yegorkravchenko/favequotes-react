@@ -1,0 +1,43 @@
+@use '../../styles/variables';
+@use '../../styles/global';
+
+.Header {
+  padding: 30px 0;
+
+  &__wrapper {
+    @extend .wrapper;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    color: variables.$dark-main;
+    font-size: 1.8rem;
+    font-weight: 800;
+  }
+}
+
+.Nav {
+  &__list {
+    list-style-type: none;
+  }
+
+  &__list-item {
+    display: inline-block;
+    margin-left: 80px;
+  }
+
+  &__link {
+    color: variables.$dark-main;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-decoration: none;
+    opacity: 0.45;
+
+    &--active,
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
