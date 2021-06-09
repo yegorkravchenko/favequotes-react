@@ -2,7 +2,7 @@
 @use '../../styles/global';
 
 .Header {
-  padding: 30px 0;
+  padding: 50px 0;
 
   &__wrapper {
     @extend .wrapper;
@@ -25,7 +25,9 @@
 
   &__list-item {
     display: inline-block;
-    margin-left: 80px;
+    &:last-child {
+      margin-left: 80px;
+    }
   }
 
   &__link {
@@ -38,6 +40,22 @@
     &--active,
     &:hover {
       opacity: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .Header {
+    padding: 30px 0;
+
+    &__wrapper {
+      flex-direction: column;
+      justify-content: unset;
+      align-items: center;
+    }
+
+    &__logo {
+      margin-bottom: 15px;
     }
   }
 }
